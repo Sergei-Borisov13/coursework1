@@ -19,6 +19,7 @@ public class Employee {
     public int getId() {
         return this.id = id;
     }
+
     public String getFIO() {
         return FIO;
     }
@@ -43,6 +44,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Id:" + id +  ", ФИО: " + FIO + ", Отдел: " + department + ", Зарплата в месяц: " + salary;
+        return "Id:" + id + ", ФИО: " + FIO + ", Отдел: " + department + ", Зарплата в месяц: " + salary;
+    }
+
+    public String toStringNotDepartament() {
+        return "Id:" + id + ", ФИО: " + FIO + ", Зарплата в месяц: " + salary;
     }
 }

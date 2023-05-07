@@ -14,9 +14,8 @@ public class Main {
         employee.addEmployee("Корнилова Бронислава Эдуардовна", 3, 98365);
         employee.addEmployee("Селиверстов Арнольд Глебович", 4, 137542);
         employee.addEmployee("Сорокина Тала Авксентьевна", 4, 125600);
-// удаление сотрудника
-        employee.removeEmployee("Борисов Сергей Олегович");
-        printSeparator();
+        employee.addEmployee("Иванов Иван Иванович", 5, 121600);
+        employee.addEmployee("Васильев Василий Васильевич", 5, 122700);
 // печать всех сотрудников
         employee.printEmployee();
         printSeparator();
@@ -24,18 +23,31 @@ public class Main {
         employee.printFioEmployee();
         printSeparator();
 // затраты в месяц
-        System.out.println("Затраты в месяц - " + employee.findCostWages() + "рублей");
+        System.out.println("Затраты в месяц - " + employee.findCostWages() + " рублей");
         printSeparator();
 // средня зп
-        System.out.println("Средняя зарплата в месяц - " + employee.averageSalary());
+        System.out.println("Средняя зарплата в месяц - " + employee.averageSalary() + " рублей");
         printSeparator();
 // min зп
-        System.out.println("Минимальная зарплата - " + employee.minSalary());
+        employee.minSalary();
         printSeparator();
 // max зп
-        System.out.println("Максимальная зарплата - " + employee.maxSalary());
+        employee.maxSalary();
         printSeparator();
-
-
+// печать сотрудников по отделу
+        employee.printFioEmployeeByDepartament();
+        printSeparator();
+// сотрудники с ЗП меньше
+        employee.printEmployeesLessSalary(110000);
+        printSeparator();
+// сотрудники с ЗП больше
+        employee.printEmployeesMoreSalary(110000);
+        printSeparator();
+// печать сотрудников отдела
+        employee.printFioEmployeeOfDepartament(1);
+        printSeparator();
+// средняя зп по отделу
+        System.out.println(employee.averageSalaryOfDepartament(2));
+        printSeparator();
     }
 }
